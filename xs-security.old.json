@@ -1,0 +1,10 @@
+{
+  "scopes": [],
+  "attributes": [],
+  "role-templates": [],
+  "xsappname": "appinv",
+  "tenant-mode": "dedicated",
+  "oauth2-configuration": {
+    "redirect-uris": []
+  }
+}

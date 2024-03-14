@@ -1,0 +1,12 @@
+{
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/api/(.*)$",
+      "target": "$1",
+      "destination": "dest-backend",
+      "authenticationType": "none",
+      "csrfProtection": true
+    },
+  ]
+}

@@ -1,0 +1,45 @@
+{
+    "name": "aldi-app-inventory-v2",
+    "version": "1.0.0",
+    "description": "ALDI App Inventory",
+    "engines": {
+        "node": "^18.x",
+        "npm": "^9.x"
+    },
+    "dependencies": {
+        "@sap/cds": "^7.4",
+        "@sap/cds-hana": "^2",
+        "@sap/xssec": "^3",
+        "express": "^4",
+        "passport": "^0"
+    },
+    "devDependencies": {
+        "@cap-js/sqlite": "^1.4.0",
+        "@sap/cds-dk": "^7",
+        "@sap/eslint-plugin-cds": "^2.6.5",
+        "@sap/ux-specification": "UI5-1.120",
+        "eslint": "^8.56.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.29.1"
+    },
+    "scripts": {
+        "start": "cds-serve",
+        "lint": "eslint . --ext .js && cds lint",
+        "lint:fix": "eslint . --fix",
+        "cleanup": "rm -rf node_modules && rm -rf */node_modules && rm -rf */*/node_modules",
+        "build": "cds build --production"
+    },
+    "cds": {
+        "features": {
+            "fiori_preview": true
+        },
+        "requires": {
+            "[production]": {
+                "db": "hana"
+            }
+        }
+    },
+    "sapux": [
+        "app/appinventory"
+    ]
+}

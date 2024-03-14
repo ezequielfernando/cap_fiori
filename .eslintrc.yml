@@ -1,0 +1,14 @@
+env:
+  browser: true
+  es2021: true
+extends: airbnb-base
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+rules: {
+  "no-console": "off",
+  "no-plusplus": "off",
+  "no-await-in-loop": "off",
+  "array-callback-return": "off",
+  "no-unused-expressions": "off",
+}

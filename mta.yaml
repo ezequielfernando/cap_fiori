@@ -1,0 +1,77 @@
+_schema-version: '3.1'
+ID: aldi-app-inventory-v2
+version: 1.0.0
+description: "ALDI App Inventory V2"
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npx cds build --production
+modules:
+  - name: appinv2-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm
+    provides:
+      - name: backend-api
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: appinv2-db
+      - name: appinventory-uaa
+
+  - name: appinv2-db-deployer
+    type: hdb
+    path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: appinv2-db
+
+  # - name: appinv2-frontend
+  #   type: staticfile
+  #   path: ./app/appinventory/webapp
+  #   parameters:
+  #     memory: 512M
+  #     disk_quota: 512M
+  #   provides:
+  #     - name: web
+  #       properties:
+  #         frontend-route: ${default-url}
+
+  - name: appinv2-approuter
+    type: approuter.nodejs
+    path: ./approuter/
+    parameters:
+      keep-existing-routes: true
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: backend-api
+        group: destinations
+        properties:
+          name: dest-backend
+          url: ~{srv-url}
+          forwardAuthToken: true
+      - name: appinventory-uaa
+
+resources:
+  - name: appinv2-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+  - name: appinventory-uaa
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: appinventory
+        tenant-mode: dedicated 

@@ -1,0 +1,14 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": true,
+  "xmlWhitespaceSensitivity": "ignore",
+  "overrides": [
+    {
+      "files": "*.xml",
+      "options": {
+        "printWidth": 150
+      }
+    }
+  ]
+}

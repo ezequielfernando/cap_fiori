@@ -1,0 +1,98 @@
+ID,value
+1,ABAP environment
+2,Advanced Event Mesh
+3,Agent Activation for Dynatrace Service
+4,Agentry
+5,Alert Notification
+6,Application Autoscaler
+7,Application Logging Service
+8,Audit Log Service
+9,Authorization and Trust Management Service
+10,Automation Pilot
+11,Bandwidth
+12,Business Application Studio
+13,Business Entity Recognition
+14,Cloud Foundry Runtime
+15,Cloud Integration Automation
+16,Cloud Integration for Data Services
+17,Cloud Management Service
+18,Cloud Portal Service
+19,Cloud Transport Management
+20,Connectivity Service
+21,Content Agent Service
+22,Continuous Integration Delivery
+23,Conversational AI
+24,Credential Store
+25,Custom Domain
+26,Data Attribute Recommendation
+27,Data Privacy Integration
+28,Data Quality Services
+29,Date and Time
+30,Destination
+31,Document Classification
+32,Document Information Extraction
+33,Document Management Service Application Option
+34,Document Management Service Integration Option
+35,Event Mesh
+36,Feature Flags Service
+37,Forms Service by Adobe
+38,HTML5 Application Repository Service
+39,IBAN service
+40,Identity Authentication
+41,Identity Provisioning
+42,Integration Suite
+43,Intelligent intercompany reconciliation
+44,Intelligent Situation Automation
+45,Invoice Object Recommendation
+46,Job Scheduling Service
+47,Keystore Service
+48,Kyma Runtime
+49,Launchpad Service
+50,Market Rates Bring Your Own Rates
+51,Market Rates Refinitiv
+52,Master Data Integration
+53,Master Data Service for Business Partners
+54,Mobile Services
+55,Monitoring Service
+56,OAuth 2 0
+57,Object Store
+58,Personal Data Manager
+59,Personalized Recommendation
+60,PostgreSQL hyperscaler option
+61,Print Service
+62,Process Automation
+63,Rapid Application Development by Mendix
+64,Redis hyperscaler option
+65,Responsibility Management Service
+66,SaaS Provisioning Service
+67,SAP AI Core
+68,SAP AI Launchpad
+69,SAP Analytics Cloud embedded edition
+70,SAP Analytics Cloud
+71,SAP AppGyver
+72,SAP ASE Service
+73,SAP Cloud ALM memory extension
+74,SAP Data Intelligence
+75,SAP Data Retention Manager
+76,SAP Data Warehouse Cloud
+77,SAP Document and Reporting Compliance service
+78,SAP Graph
+79,SAP HANA Cloud
+80,SAP HANA Service SAP Regions 
+81,SAP HANA spatial services
+82,SAP Intelligent RPA
+83,SAP IoT
+84,SAP Omnichannel Promotion Pricing
+85,SAP Solution Lifecycle Management service
+86,SAP Task Center
+87,SAP Translation Hub
+88,SAP Variant Configuration and Pricing
+89,SAP Work Zone
+90,Service Manager
+91,Service Ticket Intelligence
+92,UI5 flexibility for key users
+93,Usage Data Management Service
+94,Web Analytics
+95,Web IDE Full-Stack
+96,Work Calendar
+97,Workflow Management

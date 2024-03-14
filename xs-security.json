@@ -1,0 +1,53 @@
+{
+  "xsappname": "appinventoryv2",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    },
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "display"
+    },
+    {
+      "name": "$XSAPPNAME.Edit",
+      "description": "edit"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": ["uaa.user"]
+    },
+    {
+      "name": "Viewer",
+      "description": "View all apps",
+      "scope-references": ["$XSAPPNAME.Display"],
+      "attribute-references": []
+    },
+    {
+      "name": "Editor",
+      "description": "Edit apps",
+      "scope-references": ["$XSAPPNAME.Edit"],
+      "attribute-references": []
+    }
+  ],
+  "attributes": [],
+  "role-collections": [
+    {
+      "name": "appinventory_viewer",
+      "description": "appinventory viewer Role Collection",
+      "role-template-references": ["$XSAPPNAME.Viewer"]
+    },
+    {
+      "name": "appinventory_editor",
+      "description": "appinventory editor Role Collection",
+      "role-template-references": ["$XSAPPNAME.Editor", "$XSAPPNAME.Viewer"]
+    }
+  ],
+  "oauth2-configuration": {
+    "system-attributes": ["groups", "rolecollections"]
+  }
+}
