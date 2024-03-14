@@ -1,5 +1,5 @@
 {
-  "xsappname": "aldi-app-inventory-v2",
+  "xsappname": "bookshop",
   "tenant-mode": "dedicated",
   "description": "Security profile of called application",
   "scopes": [
